@@ -224,7 +224,7 @@
 
 ### 3.3.4 image 태그
 
-- 아이콘은 https://react-icons.github.io/react-icons 활용
+- 아이콘은 https://react-icons.github.io/react-icons 활용.
 - `<img src="이미지경로/파일명.확장" alt="대체글" />`
 
 # 4. CSS 의 이해
