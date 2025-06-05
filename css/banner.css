@@ -11,10 +11,11 @@
   gap: 25px;
 }
 .banner_slide_item {
+  display: block;
   border-radius: 15px;
   overflow: hidden;
 
-  height: 345;
+  height: 345px;
   background-color: red;
 }
 .banner_slide_item img {
@@ -27,6 +28,7 @@
   position: absolute;
   left: 0;
   top: 50%;
+  z-index: 100;
 
   transform: translateY(-50%) translateX(-50%);
 
@@ -43,7 +45,7 @@
 
   cursor: pointer;
 
-  box-shadow:  0 0 8px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
 }
 .banner_slide_prev img {
   transform: rotate(180deg);
@@ -52,6 +54,7 @@
   position: absolute;
   right: 0;
   top: 50%;
+  z-index: 100;
 
   transform: translateY(-50%) translateX(50%);
 
@@ -67,10 +70,26 @@
   align-items: center;
 
   cursor: pointer;
-  
-  box-shadow:  0 0 8px rgba(0, 0, 0, 0.13);
+
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
 }
 
 .banner_slide_pg {
-    display: none;
+  display: none;
+}
+
+@media all and (max-width: 1280px) {
+  .banner_slide_item {
+    height: 275px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .banner_slide_item {
+    height: 202px;
+  }
+}
+@media all and (max-width: 760px) {
+  .sw_banner {
+    max-width: 350px;
+  }
 }
