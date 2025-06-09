@@ -51,14 +51,6 @@ window.addEventListener("DOMContentLoaded", function () {
   const bannerPos = document.querySelector(".sw_banner .swiper-wrapper");
 
   // html 태그 만들기
-  const tag = `
-  <div class="swiper-slide">
-                    <a href="#" class="banner_slide_item">
-                      <img src="images/s1.png" alt="이미지" />
-                    </a>
-                  </div>
-  `;
-
   //  6개 만들기
   let htmlTag = "";
 
