@@ -86,11 +86,11 @@
   object-fit: cover;
 }
 .tour_item_info {
-  height: calc(100% - 255px);
   padding: 20px;
-  position: relative;
   border: 1px solid #f0f0f0;
   border-top: none;
+  position: relative;
+  height: calc(100% - 255px);
   border-radius: 0px 0px 12px 12px;
 }
 .tour_item_info .tour_city {
@@ -114,75 +114,75 @@
 /* 한줄 말줄임 ... 은 css 작업합니다 */
 /* 한줄 이상 말줄임 ... 은 css 작업합니다. */
 .tour_item_info .tour_item_title {
+  /* 아래는 보관해 두세요. */
+  overflow: hidden;
   font-size: 15px;
   font-weight: 400;
   color: #333;
-  /* 아래는 보관해 두세요. */
-  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .tour_item_info .tour_price {
-  color: #111;
   font-size: 20px;
   font-weight: 400;
+  color: #111;
 }
 .tour_item_info .tour_price b {
   font-weight: 700;
 }
 .tour_slide_prev {
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   position: absolute;
-  left: 0;
   top: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  left: 0;
   z-index: 999;
 
   width: 48px;
   height: 48px;
-  border-radius: 24px;
   background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid #e5e5e5;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   cursor: pointer;
+  transform: translateY(-50%) translateX(-50%);
+  border-radius: 24px;
 }
 .tour_slide_prev img {
   transform: rotate(180deg);
 }
 .tour_slide_next {
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   position: absolute;
-  right: 0;
   top: 50%;
-  transform: translate(50%, -50%);
+  right: 0;
   z-index: 999;
 
   width: 48px;
   height: 48px;
-  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid #e5e5e5;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   cursor: pointer;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
 }
 .tour_more {
-  padding-top: 50px;
   display: flex;
   justify-content: center;
+  padding-top: 50px;
 }
 .tour_more_bt {
   display: flex;
-  align-items: center;
   gap: 7px;
-
-  height: 56px;
-  border-radius: 28px;
+  align-items: center;
   padding: 0 20px;
 
   border: 1px solid #e5e5e5;
+
+  height: 56px;
   background-color: #fff;
 
   font-size: 16px;
   font-weight: 700;
   color: #333;
+  border-radius: 28px;
 }
 .swiper-button-disabled {
   display: none !important;
@@ -192,7 +192,7 @@
 @media all and (max-width: 1280px) {
 }
 @media all and (max-width: 1024px) {
-  .tour_slide_wrap{
+  .tour_slide_wrap {
     width: 1024px;
   }
 }
