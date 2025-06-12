@@ -33,13 +33,13 @@
   justify-content: center;
   width: 100%;
 }
-.tour_botton_list {
+.tour_button_list {
   display: flex;
   gap: 6px;
 }
-.tour_botton_list li {
+.tour_button_list li {
 }
-.tour_botton_list li button {
+.tour_button_list li button {
   padding: 0 18px;
   border: 1px solid #e5e5e5;
   /* padding: 15px 20px; */
@@ -48,7 +48,7 @@
   cursor: pointer;
   border-radius: 22px;
 }
-.tour_botton_list li button:active {
+.tour_button_list li button:active {
   opacity: 0.65;
 }
 .tour_focus {

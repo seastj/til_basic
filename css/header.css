@@ -68,7 +68,7 @@
 
 .search_scroll {
   position: absolute;
-  top: 0;
+  top: 8px;
   left: 190px;
 }
 

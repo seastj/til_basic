@@ -3,6 +3,7 @@ window.addEventListener("load", function () {
   // 포커스 되었을 때 적용될 포커스 이름
   const focusName = "tour_focus";
   const bts = document.querySelectorAll(".tour_button_list li button");
+  console.log(bts);
   // 태그 들을 모아둔 배열을 다룰때 추천 반복 문법
   bts.forEach(function (item) {
     item.addEventListener("click", function () {
