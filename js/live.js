@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
   new Swiper(".sw_live", {
-    slidesPerView: 12,
+    slidesPerView: 3,
     spaceBetween: 10,
     slidesPerGroup: 1,
     navigation: {
