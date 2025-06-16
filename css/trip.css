@@ -104,6 +104,7 @@
   font-size: 14px;
   color: #666;
   padding: 5 px 0;
+  flex-wrap: wrap;
 }
 .trip_schedule span {
   position: relative;
@@ -259,7 +260,6 @@
     display: none;
   }
   .trip_footer {
-    padding-top: 12px;
   }
 }
 @media all and (max-width: 960px) {

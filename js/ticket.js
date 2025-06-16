@@ -1,4 +1,6 @@
 window.addEventListener("load", function () {
+  const ticketApiData = [];
+  const ticketPos = document.querySelector(".sw_ticket .swiper-wrapper");
   // swiper 만들기 실행
   new Swiper(".sw_ticket", {
     slidesPerView: 3,
