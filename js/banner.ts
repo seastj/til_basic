@@ -1,6 +1,6 @@
 declare var Swiper: any;
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", (): void => {
   // 가짜 데이터(Dummy 데이터 또는 Mock 데이터)
   type BannerDataType = {
     id: number;
@@ -54,7 +54,9 @@ window.addEventListener("DOMContentLoaded", function () {
   ];
 
   // 슬라이드 갯수
-  const total = apiData.length;
+  const total: number = apiData.length;
+  // 아래 코드는 별도로 작성을 한 것입니다. (보관 권장)
+  const banner: Element | null = document.querySelector(".sw_banner");
   // 슬라이드 배치 장소
   const bannerPos: Element | null = document.querySelector(
     ".sw_banner .swiper-wrapper"
@@ -63,60 +65,61 @@ window.addEventListener("DOMContentLoaded", function () {
   // html 태그 만들기
   //  6개 만들기
   let htmlTag: string = "";
-
-  for (let i: number = 0; i < total; i++) {
-    const tempData: BannerDataType = apiData[i];
-    htmlTag += `<div class="swiper-slide">
+  function makeHtml(): void {
+    for (let i: number = 0; i < total; i++) {
+      const tempData: BannerDataType = apiData[i];
+      htmlTag += `<div class="swiper-slide">
                     <a href="${tempData.link}" class="banner_slide_item">
                       <img src="${tempData.image}" alt="${tempData.alt}" />
                     </a>
                   </div>
     `;
+    }
+
+    // html 장소에 배치하기
+    if (bannerPos) {
+      bannerPos.innerHTML = htmlTag;
+    }
   }
-
-  // console.log(htmlTag);
-
-  // html 장소에 배치하기
-  if (bannerPos) {
-    bannerPos.innerHTML = htmlTag;
-  }
-
   //  슬라이드 만들기
-
-  const swiper: any = new Swiper(".sw_banner", {
-    slidesPerView: 1,
-    spaceBetween: 25,
-    loop: true,
-    speed: 1000,
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".banner_slide_next",
-      prevEl: ".banner_slide_prev",
-    },
-
-    pagination: {
-      el: ".banner_slide_pg",
-      clickable: true,
-    },
-
-    breakpoints: {
-      760: {
-        slidesPerView: 2,
-        spaceBetween: 25,
+  function makeSlide(): any {
+    const swiper: any = new Swiper(".sw_banner", {
+      slidesPerView: 1,
+      spaceBetween: 25,
+      loop: true,
+      speed: 1000,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
       },
-    },
-  });
+      navigation: {
+        nextEl: ".banner_slide_next",
+        prevEl: ".banner_slide_prev",
+      },
 
-  // 아래 코드는 별도로 작성을 한 것입니다. (보관 권장)
-  const banner: Element | null = document.querySelector(".sw_banner");
+      pagination: {
+        el: ".banner_slide_pg",
+        clickable: true,
+      },
+
+      breakpoints: {
+        760: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+      },
+    });
+    return swiper;
+  }
+
+  makeHtml();
+  const swiper = makeSlide();
+
   // 배너 영역에 마우스가 걸친다면
-  banner!.addEventListener("mouseenter", function () {
+  banner!.addEventListener("mouseenter", () => {
     swiper.autoplay.stop();
     //  배너 영역에 마우스가 빠져나간다면
-    banner!.addEventListener("mouseleave", function () {
+    banner!.addEventListener("mouseleave", () => {
       swiper.autoplay.start();
     });
   });
